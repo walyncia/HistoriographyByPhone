@@ -1,18 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
-/* 
-    #header {
-        background-color: black;
-        height: 2%;
-        width: 100vw;
-        overflow: hidden;
-        top: 0;
-    } */
-    html {
+html {
         background-image: url("backgroundIMG.jpg"); 
         background-size: cover;
+        width: 100%;
+        height: 100%;
     }
 
-    #folder{
+#folder{
         background-color: rgb(255 255 255 / 31%);
         height: 460px;
         height: 90vh;
@@ -27,21 +22,30 @@
         width: calc(80% - 20px);
         justify-content: center;
         margin: 0 auto;
+        border: 2px solid rgb(255 255 255 / 31%);
        }
 
     @media screen and (max-width: 900px){
         body {padding: 3%;}
-        html {background-image: url("iPad-Wallpaper.jpg"); background-size:cover; }
+        /* html {background-image: url("iPad-Wallpaper.jpg"); background-size:cover; } */
+        html {background-image: url("backgroundIMG.jpg"); background-size:cover; }
         #dock {display: none;}
         #menu {display: none;}
         #header {padding: 0 16px;}
+        #sidenav {display: none;}
+        #contentlabel>#content-text {display: none;}
+        #Mobilecontent-text>table {display: inline;}
     }
     @media screen and (max-width: 450px){
         body {margin: 1%;}
-        html {background-image: url("iphoneWallpaper.jpg"); background-size:cover; }
+        /* html {background-image: url("iphoneWallpaper.jpg"); background-size:cover; } */
+        html {background-image: url("backgroundIMG.jpg"); background-size:cover; }
         #dock {display: none;}
         #menu {display: none;}
         #header {padding: 0 16px;}
+        #sidenav>table{display: none;}
+        #contentlabel>#content-text {display: none;}
+        #Mobilecontent-text>table {display: inline;}
     }
     #dock{
         background-color: rgb(255 255 255 / 31%);
@@ -57,6 +61,7 @@
         bottom: 0;
         margin: 0 auto;
         margin-top: 2%;
+        border: 2px solid rgb(255 255 255 / 31%);
 
        }
 
@@ -85,8 +90,59 @@
         padding: 0 30px;
         white-space: nowrap;
         background-color:  rgb(255 255 255 / 31%);
-        top: 3px;
+        top: 0px;
         position: absolute;
         overflow: hidden;
+        z-index: -1;
         border-radius: 14px 14px 1px 1px;
+        border-bottom: 1px solid rgb(255 255 255 / 31%);
+    }
+
+#sidenav{
+    position: absolute;
+    overflow: hidden;
+    width: 20%;
+    height: 91.1%;
+    bottom:0;
+    background-color:  rgb(255 255 255 / 31%);
+    border-right: 1px solid rgb(255 255 255 / 31%);
+    }
+#contentlabel {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        height: 38px;
+        width: 73.2%;
+        padding: 0 30px;
+        top: 8.8%;
+        white-space: nowrap;
+        background-color:  rgb(255 255 255 / 31%);
+        right: 0px;
+        position: absolute;
+        overflow: hidden;
+        border-bottom: 1px solid rgb(255 255 255 / 31%);
+    }
+#contentlabel {
+        justify-content: center;
+        margin: 0 auto;
+    }
+#content-text>tr{
+        border-left: 1px solid red;
+        font-size: 32px;
+
+    }
+#Mobilecontent-text {
+        align-items: center;
+        flex-shrink: 0;
+        height: 28px;
+        width: 100%;
+        padding: 0 30px;
+        top: 8.8%;
+        white-space: nowrap;
+        background-color:  rgb(255 255 255 / 31%);
+        right: 0px;
+        position: absolute;
+        overflow: hidden;
+        border-bottom: 1px solid rgb(255 255 255 / 31%);
+        display: none;
     }
