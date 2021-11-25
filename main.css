@@ -31,7 +31,14 @@
 
     @media screen and (max-width: 900px){
         body {padding: 3%;}
-        html {background-image: linear-gradient(to bottom right, rgb(59, 50, 68), rgb(160, 125, 79)); background-size:cover; }
+        html {background-image: url("iPad-Wallpaper.jpg"); background-size:cover; }
+        #dock {display: none;}
+        #menu {display: none;}
+        #header {padding: 0 16px;}
+    }
+    @media screen and (max-width: 450px){
+        body {margin: 1%;}
+        html {background-image: url("iphoneWallpaper.jpg"); background-size:cover; }
         #dock {display: none;}
         #menu {display: none;}
         #header {padding: 0 16px;}
@@ -63,9 +70,9 @@
         flex-shrink: 0;
         /* margin-left:-2%;
         margin-top: -58%; */
-        position: fixed;
-        top:20px;
-        left:12%;
+        position: relative;
+        top:-5px;
+        left:-1%;
 
        }
 
